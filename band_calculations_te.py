@@ -10,7 +10,11 @@ from tensorflow import keras
 from tensorflow.keras import layers
 
 # Define lattice parameters for trigonal Te (at 0 GPa)
+<<<<<<< HEAD
 a = 4.45  # Lattice constant in Angstroms
+=======
+a = 4.45  # Lattice constant in Angstroms s
+>>>>>>> ff892ae (wdwwddwwd)
 c = 5.93  # c-axis length in Angstroms
 structure = bulk("Te", crystalstructure="hexagonal", a=a, c=c)
 

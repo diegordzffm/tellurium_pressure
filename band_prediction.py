@@ -4,7 +4,11 @@ from tensorflow import keras
 from tensorflow.keras import layers
 import matplotlib.pyplot as plt
 
+<<<<<<< HEAD
 # Simulated training data (example k-points and energy bands)
+=======
+# Simulated training data (example k-points and energy bands) d
+>>>>>>> ff892ae (wdwwddwwd)
 kpoints = np.array([
     [0.0, 0.0, 0.0],
     [0.5, 0.0, 0.0],

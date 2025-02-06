@@ -5,7 +5,11 @@ The fundamental model to describe the band structure is based on the Kohn-Sham e
 
 ​
 ​
+<<<<<<< HEAD
  (r) is the exchange-correlation potential.
+=======
+ (r) is the exchange-correlation potential..
+>>>>>>> ff892ae (wdwwddwwd)
 2. Plane Wave Basis & Pseudopotentials
 Most DFT calculations for solids use a plane wave basis set:
 
