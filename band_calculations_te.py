@@ -9,18 +9,20 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
+<<<<<<< HEAD
 # Define lattice parameters for trigonal Te (at 0 GPa)
 <<<<<<< HEAD
 a = 4.45  # Lattice constant in Angstroms
 =======
+=======
+>>>>>>> d0ed05e (sdsdsdwdw)
 a = 4.45  # Lattice constant in Angstroms s
 >>>>>>> ff892ae (wdwwddwwd)
 c = 5.93  # c-axis length in Angstroms
 structure = bulk("Te", crystalstructure="hexagonal", a=a, c=c)
 
-# Define Quantum ESPRESSO input parameters
-pseudopotentials = {"Te": "Te.pbe-n-rrkjus_psl.1.0.0.UPF"}  # Set your pseudopotential file
-k_grid = (12, 12, 12)  # Increased k-point density
+pseudopotentials = {"Te": "Te.pbe-n-rrkjus_psl.1.0.0.UPF"}  
+k_grid = (12, 12, 12)  
 
 input_data = {
     "control": {
@@ -81,14 +83,12 @@ with open("band_structure.out", "r") as f:
 
 band_energies = np.array(band_energies).T
 
-# Bayesian Analysis for Energy Prediction
 with pm.Model() as model:
     mu = pm.Normal("mu", mu=0, sigma=10)
     sigma = pm.HalfNormal("sigma", sigma=1)
     obs = pm.Normal("obs", mu=mu, sigma=sigma, observed=band_energies.flatten())
     trace = pm.sample(1000, return_inferencedata=False)
 
-# Neural Network for Band Structure Prediction
 model_nn = keras.Sequential([
     layers.Dense(64, activation="relu", input_shape=(len(kpoints),)),
     layers.Dense(64, activation="relu"),
