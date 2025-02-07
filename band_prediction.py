@@ -5,17 +5,11 @@ from tensorflow.keras import layers
 import matplotlib.pyplot as plt
 from scipy.spatial import distance_matrix
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Simulated training data (example k-points and energy bands)
-=======
-# Simulated training data (example k-points and energy bands) d
->>>>>>> ff892ae (wdwwddwwd)
+
 kpoints = np.array([
-=======
 num_kpoints = 50
 high_symmetry_points = np.array([
->>>>>>> d0ed05e (sdsdsdwdw)
+
     [0.0, 0.0, 0.0],
     [0.5, 0.0, 0.0],
     [1/3, 1/3, 0.0],
@@ -66,7 +60,6 @@ history = model.fit(kpoints_transformed, band_energies, epochs=500, verbose=1, b
 
 predicted_energies = model.predict(kpoints_transformed)
 
-# Plot results
 plt.figure(figsize=(8, 5))
 plt.plot(range(len(kpoints)), band_energies, color="blue", linestyle="solid", label="Tight-Binding Model")
 plt.plot(range(len(kpoints)), predicted_energies, color="red", linestyle="dashed", label="Neural Network Prediction")
